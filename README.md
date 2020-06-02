@@ -15,3 +15,5 @@ Investigación UX:
 4 Agregar un resumen del feedback recibido indicando las mejoras a realizar.
 
 Imagen del prototipo final
+https://docs.google.com/presentation/d/1w3zb0qix7YmG6zp57BHgmmWMRC_I42-xKD7Th9dJH-4/edit?usp=sharing
+
