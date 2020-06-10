@@ -1,51 +1,72 @@
-*, *::before, *::after{
-  box-sizing: border-box;
-  font-family: sans-serif;
+/* ---------- Estilo para el titulo de Banca Virtual (header)----------*/
+.titulo{
+    text-align: center;
+    font-family: fantasy;
+    color: deepskyblue;
+    font-size: 25px;
 }
-main{
-  font-weight: normal;
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content:center;
-  align-items: center;
-  background-color: blue,100%,20%;
+
+/* ---------- Estilos para el aviso (main parte 1) ----------*/
+.caja{
+    background-color: deepskyblue;
+    width: 90%;
+    max-width: 1000px;
+    padding: 25px 50px 25px 100px;
+    border: 0px;
 }
-.logo1{
-  align-items:center;
+.subtitulo{
+    text-align: left;
+    color: white;
+    text-shadow: 2px;
 }
-.container{
-  align-items:center;
-  background-color:bisque;
-  width: 90%;
-  max-width: 450px;
-  margin: auto;
-  padding: 5px 35px;
-  margin-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px;
-  grid-template-columns: repeat(1,auto;)
+.aviso{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
-.form-label{
-  display: block;
-  position: relative;
+
+/* ---------- Estilo para el logo (main parte 2)----------*/
+.logo{
+    align-content: flex-start;
 }
-.valButton{
-  border: 1px solid;hsl
-  color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  outline: none
-  margin: 4px 2px;
-  cursor:auto;
+/* ---------- Estilos para la tarjeta (main parte 3)----------*/
+
+/* ---------- Nos falta alinear el logo y la tarjeta y mejorar el fondo de la TDC---------*/
+.contenedor{
+    background-color: blueviolet;
+    width: 90%;
+    max-width: 450px;
+    padding: 5px 35px 30px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+    align-items: center;
+    display: flex;
+    grid-auto-columns: auto;
 }
-.foot{
-  text-align: center;
-  padding: 3px;
-  background-color: DarkSalmon;
-  color: white;
+.subtitulo2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.etiqueta{
+    text-align: left;
+    color: white;
+}
+.entrada{
+    font-size: 15px;
+}
+.boton{
+    border: 1px;
+    padding: 5px 10px;
+}
+
+/* ---------- Estilo para el pie de pagina (footer)  ----------*/
+.by{
+    text-align: center;
+    font-family: fantasy;
+    font-size: medium;
+    shape-outside: margin-box;
+    padding: 4px;
+    background-color: darksalmon;
+    color: azure;
 }
