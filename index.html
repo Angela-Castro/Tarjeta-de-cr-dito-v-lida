@@ -1,41 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <meta name="viewport" content="width=device-width,
-    user-scalable=no,initial-scale=1.0,maximum-sclae=1.0, mimimun-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-
-    <header>
-
-    </header>
-
-        <main class="TDC">
-          <img src="logo1.jpg"class="logo1">
-      <div class="container">
-        <form action="">
-          <div class="form-header">
-            <h1 align="center"class="form-tittle"><span>TDC VALIDACIÓN</span></h1>
-
-          <label for="fname"class="form-label">NOMBRE</label>
-          <input type="text"id="fname" name="fname" class="form-input"><br>
-          <label for="lname"class="form-label">APELLIDOS</label>
-          <input type="text"id="lname" name="lname"class="form-input"><br>
-          <label for="number"class="form-label">NÚMERO DE TARJETA DE CRÉDITO</label>
-          <input type="number"id="number"class="form-input"required><br>
-          <label for="fecha"class="form-label">FECHA EN QUE EXPIRA</label>
-          <input type="month"id="mes"class="form-input"required>
-          <button type="button"id="valButton" class="valButton"name="valButton">VALIDAR</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- Para el encabezado dejamos solo el titulo y la imagen de fondo de la pagina -->
+    <div class="titulo">
+      <h1>
+        <!-- El em lo usamos para dar cursiva al titulo -->
+        <em>Banca Virtual</em>
+      </h1>
+    </div>
+  </header>
+  <main>
+    <!-- Se deja un mensaje para insentivar al publico a usar el validador -->
+<div class="caja">
+  <!-- Usamos div para organizar mejor el css y el strong para generar la negrilla en los títulos -->
+  <div class="subtitulo"><strong>AVISO IMPORTANTE</strong></div>
+  <div class="aviso"><p><em>Para FUTURE BANK nuestros clientes son primero,
+    por lo que le informamos que debido al Coronavirus (Covid 19)
+    nuestra banca virtual como prevención de la clonación de su TDC y
+    para evitar posibles estafas o fraudes le ofrece a nuestros
+    tarjetahabientes la posibilidad de validar su Tarjeta De Crédito
+    sin ningún costo, sólo por tiempo limitado. Para acceder al beneficio,
+    por favor diligencie el formulario que encuentra a continuación.
+    Esperamos tenga un buen día.</em></p></div>
 </div>
-        </form>
-      </div>
-    </main>
+<!-- Integramos img para poner el logo del banco -->
+<div class="logo"><img src="logo1.jpg"></div>
+<div class="contenedor">
+  <!-- Pusimos form para que nos guarde los datos del formulario -->
+<form action="">
+  <div class="subtitulo">
+    <h1><strong>Tarjeta de Crédito Válida</strong></h1>
+  </div>
+  <div>
+    <!-- br lo usamos para dar espacio entre lineas -->
+    <label for="nombre" class="etiqueta"><strong>NOMBRE</strong></label>
+    <input type="text"id="nombre" class="entrada" autocomplete="off"><br>
+  </div>
+  <div>
+    <!-- Maxlength para el maximo de caracteres o digitos requeridos -->
+    <label for="creditCardNumber" class="etiqueta"><strong>NÚMERO TARJETA CRÉDITO</strong></label>
+    <Input type="texto" id="creditCardNumber"class="entrada" autocomplete="off" maxlength="16" required></Input>
+  </div>
+  <div>
+    <!-- Usamos input para enviar los datos al js y que nos de respuesta valido o no validado -->
+    <p id="validCard"></p>
+    <!-- Agrgamos onclick para que hiciera dicha funcion despues de darle click -->
+    <input type="submit" onclick="isValid()" name="Enviar" >
+  </div>
+</form>
+</div>
 
-    <footer class="foot">Elaborado por: Yuri Carreño y Angela Castro</footer>
-
-    <script src="index.js"type="module"></script>
-  </body>
+  </main>
+  <footer class="by"><p><strong><em>Creado por: Yuri Carreño y Angela Castro</em></strong></p></footer>
+  
+  <!-- <script>src="index.js" type="module" </script> -->
+  
+</body>
 </html>
