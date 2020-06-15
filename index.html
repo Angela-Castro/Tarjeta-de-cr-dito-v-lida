@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarjeta de crédito válida</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+<!-- Nos sirve para que se adapte a otros dispositivos nuestra app -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <!-- Para el encabezado dejamos solo el titulo y la imagen de fondo de la pagina -->
-    <div class="titulo">
-      <h1>
-        <!-- El em lo usamos para dar cursiva al titulo -->
-        <em>Banca Virtual</em>
-      </h1>
-    </div>
-  </header>
-  <main>
-    <!-- Se deja un mensaje para insentivar al publico a usar el validador -->
-<div class="caja">
-  <!-- Usamos div para organizar mejor el css y el strong para generar la negrilla en los títulos -->
-  <div class="subtitulo"><strong>AVISO IMPORTANTE</strong></div>
-  <div class="aviso"><p><em>Para FUTURE BANK nuestros clientes son primero,
-    por lo que le informamos que debido al Coronavirus (Covid 19)
-    nuestra banca virtual como prevención de la clonación de su TDC y
-    para evitar posibles estafas o fraudes le ofrece a nuestros
-    tarjetahabientes la posibilidad de validar su Tarjeta De Crédito
-    sin ningún costo, sólo por tiempo limitado. Para acceder al beneficio,
-    por favor diligencie el formulario que encuentra a continuación.
-    Esperamos tenga un buen día.</em></p></div>
-</div>
-<!-- Integramos img para poner el logo del banco -->
-<div class="logo"><img src="logo1.jpg"></div>
-<div class="contenedor">
-  <!-- Pusimos form para que nos guarde los datos del formulario -->
-<form action="">
-  <div class="subtitulo">
-    <h1><strong>Tarjeta de Crédito Válida</strong></h1>
-  </div>
-  <div>
-    <!-- br lo usamos para dar espacio entre lineas -->
-    <label for="nombre" class="etiqueta"><strong>NOMBRE</strong></label>
-    <input type="text"id="nombre" class="entrada" autocomplete="off"><br>
-  </div>
-  <div>
-    <!-- Maxlength para el maximo de caracteres o digitos requeridos -->
-    <label for="creditCardNumber" class="etiqueta"><strong>NÚMERO TARJETA CRÉDITO</strong></label>
-    <Input type="texto" id="creditCardNumber"class="entrada" autocomplete="off" maxlength="16" required></Input>
-  </div>
-  <div>
-    <!-- Usamos input para enviar los datos al js y que nos de respuesta valido o no validado -->
-    <p id="validCard"></p>
-    <!-- Agrgamos onclick para que hiciera dicha funcion despues de darle click -->
-    <input type="submit" onclick="isValid()" name="Enviar" >
-  </div>
-</form>
-</div>
 
-  </main>
-  <footer class="by"><p><strong><em>Creado por: Yuri Carreño y Angela Castro</em></strong></p></footer>
-  
-  <!-- <script>src="index.js" type="module" </script> -->
-  
+    <header>
+<!-- Agregamos el nombre principal de nuestra página -->
+        <div class="titulo">
+           <img src="log.jpg"> <h1><strong>BANCA VIRTUAL</strong></h1>
+           <div class="aviso">
+            <h4 class="titulo2"> <strong>AVISO IMPORTANTE</strong> </h4>
+    <p> <em>Para <span style="color:deepskyblue">FUTURE BANK</span> nuestros clientes son primero,
+        por lo que le informamos que debido al  <span style="color:deepskyblue;">Coronavirus (Covid 19)</span> 
+        nuestra banca virtual como prevención de la clonación de su TDC y
+        para evitar posibles estafas o fraudes le ofrece a nuestros
+        tarjetahabientes la posibilidad de <span style="color: deepskyblue;">validar su Tarjeta De Crédito</span> 
+        sin ningún costo, sólo por tiempo limitado. Para acceder al beneficio,
+        por favor diligencie el formulario que encuentra a continuación.
+        Esperamos tenga un buen día.</em></p>
+        </div>
+        </div>
+       
+    </header>
+    <main>
+<!-- Comenzamos creando nuestro formulario tipo TDC-->
+<!-- CONTENEDOR (caja): Elemento padre que contiene los items flexibles y adaptables -->
+<div class="caja">
+    <!-- Primera parte de la tarjeta -->
+    <section class="tdc">
+<!-- Pusimos el logo del banco y decoramos con un chip de tarjeta-->
+<div class="logo-banco"><img src="log.jpg" alt=""></div>
+<div class="chip"><img src="chip.png" alt=""></div>
+   
+<!-- FORMULARIO-->
+<form action="" id="formulario-tdc" class="formulario-tdc">
+    <div class="datos">
+        <label for="nombre">NOMBRE</label>
+        <input type="text" id="nombre" maxlength="19" autocomplete="off" required><br>
+        <label for="numeroTarjeta">NÚMERO TARJETA CRÉDITO</label>
+        <input type="text" id="creditCardNumber" maxlength="16" autocomplete="off" required ><br>
+    </div>
+    <!-- Creamos en botón para enviar los datos -->
+    <div>
+        <input type="submit" class="caja-btn" onclick="isValid()" name="enviar"><br>
+    </div>
+</form>
+
+     </section>
+</div>
+    </main>
+
+    <footer class="foot" ><h2><strong><em>By: Yury Carreño & Angela Castro</em></strong></h2></footer>
+    <script src="index.js" type="module"></script>
+    
 </body>
 </html>
